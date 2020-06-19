@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/datarsys/public_html/
-    - /bin/cp -R _site $DEPLOYPATH
+    - /bin/cp -R _site/* $DEPLOYPATH
     
