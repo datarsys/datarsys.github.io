@@ -15,7 +15,7 @@ keep_files:
 
 # Site settings
 title: Data & Visualisation Solutions | Datarsys
-subtitle: "A free HTML5 agency template"
+subtitle: "Bring Clarity to your data"
 url: "https://www.datarsys.co.uk" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: ""

@@ -10,8 +10,8 @@ permalink: /
     <div class="row">
       <div class="col-md-10 col-md-offset-2">
         <div class="block">
-          <h1 class="animated fadeInUp">A DIGITAL MARKETING &#38; <br> DESIGN AGENCY</h1>
-          <p class="animated fadeInUp">We love the Web and the work we do. We work closely with our clients to deliver the best possible solutions for their needs</p>
+          <h1 class="animated fadeInUp">A DATA VISUALISATION &#38; <br>SOLUTIONS SPECIALIST</h1>
+          <p class="animated fadeInUp">Connect. Analyse. Automate. Visualise.</p>
         </div>
       </div>
     </div>
@@ -66,6 +66,8 @@ permalink: /
       <div class="col-sm-6 col-md-3">
         <div class="service-item">
           <i class="icon ion-coffee"></i>
+          <ion-icon name="cafe" size="large" class="ion-icon-large"></ion-icon>
+          <i class="material-icons">face</i>
           <h4>Branding</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
         </div>
@@ -73,6 +75,8 @@ permalink: /
       <div class="col-sm-6 col-md-3">
         <div class="service-item">
           <i class="ion-compass"></i>
+          <i class="material-icons">engineering</i>
+
           <h4>Web Design</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
         </div>
@@ -80,6 +84,8 @@ permalink: /
       <div class="col-sm-6 col-md-3">
         <div class="service-item">
           <i class="ion-image"></i>
+          <i class="material-icons">analytics</i>
+
           <h4>App Design</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
         </div>
@@ -153,7 +159,9 @@ permalink: /
           <ul class="counter-box clearfix">
             <li>
               <div class="block">
-                <i class="{{ ff.icon }}"></i>
+              <!--  <i class="{{ ff.icon }}"></i> -->
+                <p>{{ ff.icon }}</p>
+                <ion-icon name="{{ ff.icon }}"></ion-icon>
                 <h4 class="counter">{{ ff.counter }}</h4>
                 <span>{{ ff.text }}</span>
               </div>
