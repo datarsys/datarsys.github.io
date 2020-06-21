@@ -30,7 +30,10 @@
 <script src="/js/plugins.js"></script>
 <script src="/js/min/waypoints.min.js"></script>
 <script src="/js/jquery.counterup.js"></script>
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 
 <script src="/js/main.js"></script>
 
@@ -150,38 +153,36 @@
     <div class="row ">
       <div class="col-sm-6 col-md-3">
         <div class="service-item">
+          <i class="material-icons">mediation</i>
+          <h4>Connect</h4>
+          <p>Make data available from flat files, APIs, databases, or wherever you store it.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="material-icons">engineering</i>
+          <h4>Transform</h4>
+          <p>Combine, merge, route</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
           <i class="icon ion-coffee"></i>
-          <ion-icon name="cafe" size="large" class="ion-icon-large"></ion-icon>
           <i class="material-icons">face</i>
           <h4>Branding</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
         </div>
       </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-compass"></i>
-          <i class="material-icons">engineering</i>
 
-          <h4>Web Design</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
-        </div>
-      </div>
       <div class="col-sm-6 col-md-3">
         <div class="service-item">
           <i class="ion-image"></i>
           <i class="material-icons">analytics</i>
-
           <h4>App Design</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
         </div>
       </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-bug"></i>
-          <h4>Start Up</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
-        </div>
-      </div>
+
       <div class="col-sm-6 col-md-3">
         <div class="service-item">
           <i class="ion-headphone"></i>
@@ -191,6 +192,9 @@
       </div>
       <div class="col-sm-6 col-md-3">
         <div class="service-item">
+          <i class="ion-compass"></i>
+
+          <i class="ion-bug"></i>
           <i class="ion-leaf"></i>
           <h4>Development</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
@@ -291,48 +295,6 @@
       </div>
       <div class="col-md-6">
         
-        <div class="testimonial-carousel">
-          <div id="testimonial-slider" class="owl-carousel">
-            
-            <div>
-                <img src="img/cotation.png" alt="IMG">
-                <p>This company created an e-commerce site with the tools to make our business a success, with innovative ideas. We feel that our site has unique elements that make us stand out from the crowd.</p>
-                <div class="user">
-                  <img src="img/item-img1.jpg" alt="Pepole">
-                  <p><span>Rose Ray</span> CEO-Themefisher</p>
-                </div>
-            </div>
-            
-            <div>
-                <img src="img/cotation.png" alt="IMG">
-                <p>An e-commerce site was created by this company with the tools to make our business a success, with innovative ideas. We feel that our site has unique elements that make us stand out from the crowd.</p>
-                <div class="user">
-                  <img src="img/item-img1.jpg" alt="Pepole">
-                  <p><span>Rose Ray sr.</span> CEO-Themefisher</p>
-                </div>
-            </div>
-            
-            <div>
-                <img src="img/cotation.png" alt="IMG">
-                <p>With the tools to make our business a success, this company created an e-commerce site, with innovative ideas. We feel that our site has unique elements that make us stand out from the crowd.</p>
-                <div class="user">
-                  <img src="img/item-img1.jpg" alt="Pepole">
-                  <p><span>Rose Ray jr.</span> CEO-Themefisher</p>
-                </div>
-            </div>
-            
-            <div>
-                <img src="img/cotation.png" alt="IMG">
-                <p>We feel that our site has unique elements that make us stand out from the crowd. This company created an e-commerce site with the tools to make our business a success, with innovative ideas.</p>
-                <div class="user">
-                  <img src="img/item-img1.jpg" alt="Pepole">
-                  <p><span>Rose Ray III</span> CEO-Themefisher</p>
-                </div>
-            </div>
-            
-          </div>
-        </div>
-        
       </div>
     </div>
   </div>
@@ -362,6 +324,7 @@
             <li><a href="#">Terms</a></li>
           </ul>
         </div>
+        <img src="img/name.png" alt="Company Name">
         <p>Copyright &copy; Design &amp; Developed by <a href="http://www.themefisher.com">Themefisher</a>. All rights reserved.</p>
       </div>
     </div>
