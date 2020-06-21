@@ -1,0 +1,20 @@
+- name: Tableau
+  img: tableau.png
+  desc: The industry leader in data visualisation. With a myriad of data connectors and the power to harness massive datasets
+  url: https://www.tableau.com/
+- name: Alteryx
+  img: alteryx.png
+  desc: Pioneering the Analytics Process Automation to deliver end-to-end automation of analytics.
+  url: https://www.alteryx.com/
+- name: Looker
+  img: looker.png
+  desc: A robust data model built on top of solid data pipelines for a self-service analytics experience.
+  url: https://looker.com/
+- name: dbt
+  img: dbt.png
+  desc: Data Build Tool applies the principles of software engineering to analytics code and allows full control and lineage of SQL flows.
+  url: https://www.getdbt.com/
+- name: Python
+  img: python.png
+  desc: A general programming language with extensive additions oriented to data analysis, predictive and prescriptive analytics.
+  url: https://www.python.org/
