@@ -32,7 +32,7 @@ permalink: /
       </div><!-- .col-md-7 close -->
       <div class="col-md-5 col-sm-12">
         <div class="block">
-          <img src="img/art/analysis-blackboard-board-bubble-white-background.png" alt="Img">
+          <img src="img/art/manage-your-dashboard.svg" alt="Img">
         </div>
       </div><!-- .col-md-5 close -->
     </div>
@@ -44,7 +44,8 @@ permalink: /
   <div class="row">
     <div class="col-md-6 col-md-offset-6">
       <h2>WE BELIEVE IN GREAT IDEAS</h2>
-      <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p>Working with data can be ---. Messy, heterogeneous, distributed across systems and countries
+        Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
       <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
       <p>Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
       <a href="#" class="btn btn-view-works">View Works</a>
@@ -67,7 +68,7 @@ permalink: /
         <div class="service-item">
           <i class="material-icons">mediation</i>
           <h4>Connect</h4>
-          <p>Make <b>data</b> available from flat files, APIs, databases, or wherever you store it.</p>
+          <p>Make <b>data</b> available. Flat files, APIs, databases, or wherever you store it.</p>
         </div>
       </div>
       <div class="col-sm-6 col-md-3">
@@ -90,7 +91,7 @@ permalink: /
         <div class="service-item">
           <i class="material-icons">face</i>  
           <h4>Communicate</h4>
-          <p> </p>
+          <p>Insights are only as useful as  </p>
         </div>
       </div>
     </div>
@@ -115,8 +116,8 @@ permalink: /
   <div class="container">
     <div class="row">
       <div class="section-title text-center">
-        <h2>Fun Facts About Us</h2>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+        <h2>Key Performance Indicators</h2>
+        <p>We are more than just some numbers. Yet, some numbers can give a glimpse of who we are.</p>
       </div>
     </div>
     <div class="row">
@@ -127,9 +128,8 @@ permalink: /
           <ul class="counter-box clearfix">
             <li>
               <div class="block">
-              <!--  <i class="{{ ff.icon }}"></i> -->
-                <p>{{ ff.icon }}</p>
-                <ion-icon name="{{ ff.icon }}"></ion-icon>
+              <!--  <i class="{{ ff.icon }}"></i><p>{{ ff.icon }}</p> -->
+                <ion-icon name="{{ ff.icon }}" size="large"></ion-icon>
                 <h4 class="counter">{{ ff.counter }}</h4>
                 <span>{{ ff.text }}</span>
               </div>
@@ -143,14 +143,12 @@ permalink: /
     {% if site.data.tools.size > 0 %}
     <div class="tool-carousel">
       <h3>Tools of Choice</h3>
-      <p>&nbsp;</p>
       <div id="tool-slider" class="owl-carousel">
         {% for ft in site.data.tools %}
             <div class="user">
               <img src="{{ site.baseurl }}/img/tools/{{ ft.img }}"></img>
               <h4>{{ ft.name }}</h4>
               <p><span>{{ ft.desc }}</span> </p>
-              <p>&nbsp;</p>
             </div>
         {% endfor %}
       </div>

@@ -156,6 +156,10 @@ font header .navbar-default .navbar-nav li a:hover {
   padding-left: 40px;
   width: 100%;
 }
+#intro .block img[src*="#thumbnail"] {
+  width:150px;
+  height:100px;
+}
 #intro .section-title {
   margin-bottom: 0px;
 }
@@ -174,7 +178,7 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 #service .service-item i  {
   font-size: 60px;
-  color: #4A4756; /* #ff007f; /* #4A4656;
+  color: #ff007f; /* #ff007f; /* #4A4656;
   */
 }
 #service .service-item h4 {
@@ -237,7 +241,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	Feature Start
 --*/
 #feature {
-  background: url("../img/art/black-and-white-blank-challenge-connect.jpg");
+  background: url("../img/art/development.svg");
   background-position: 50% 94px;
   width: 100%;
   display: block;
@@ -355,18 +359,19 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 #tool .block h2 {
   line-height: 27px;
-  color: #5C5C5C;
+  color: #353241;
   padding-top: 110px;
 }
 #tool .block p {
   padding-top: 50px;
-  color: #7B7B7B;
+  color: #353241;
 }
 #tool .counter-box li {
   width: 50%;
   float: left;
   text-align: center;
   margin: 30px 0 30px;
+  color: #494655;
 }
 #tool .counter-box li i {
   font-size: 35px;
@@ -375,9 +380,10 @@ font header .navbar-default .navbar-nav li a:hover {
   font-size: 30px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
+  color: #ff007f;
 }
 #tool .counter-box li span {
-  color: #555;
+  color: #353241;
 }
 #tool .tool-carousel {
   text-align: center;
@@ -413,6 +419,7 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 #tool .tool-carousel .user h4 {
 font-family: 'Roboto', sans-serif;
+color: #ff007f;
 }
 #tool .tool-carousel .owl-carousel .owl-pagination div {
   border: 1px solid #1D1D1D;

@@ -21,6 +21,7 @@ url: "https://www.datarsys.co.uk" # the base hostname & protocol for your site
 baseurl: ""
 cover: "/assets/cover.png"
 logo: "/assets/logo.png"
+contact-email: info@datarsys.co.uk
 
 # Build settings
 markdown: kramdown
@@ -31,7 +32,13 @@ ga_tracking_id: "UA-154686287-2"
 # Category descriptions (for archive pages)
 descriptions:
   - cat: Alteryx
-    desc: "Posts describing Jekyll setup techniques."
+    desc: "Workflows."
 
   - cat: Tableau
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+    desc: "Data Viz."
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      author: "DavidSM"

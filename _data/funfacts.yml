@@ -1,12 +1,12 @@
 - counter: 500
-  icon: bar-chart-sharp
+  icon: bar-chart
   text: Dashboards
-- counter: 1500
-  icon: analytics
-  text: Gallons of Soft Drink
 - counter: 1200
-  icon: cog-sharp
+  icon: construct
   text: Workflows
-- counter: 300
-  icon: timer-outline
-  text: Websites built
+- counter: 7
+  icon: business
+  text: Industries
+- counter: 215
+  icon: cafe
+  text: Monthly espressos

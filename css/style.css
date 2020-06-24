@@ -37,3 +37,8 @@
   color: green;
   font-size: 32px;
 }
+
+img[src*="#thumbnail"] {
+  width:150px;
+  height:150px;
+}
