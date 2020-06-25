@@ -156,10 +156,29 @@ font header .navbar-default .navbar-nav li a:hover {
   padding-left: 40px;
   width: 100%;
 }
-#intro .block img[src*="#thumbnail"] {
+#intro .block img[src*="#thumbnailR"] {
   width:150px;
   height:100px;
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  text-align: center;
 }
+#intro .block img[src*="#thumbnailL"] {
+  width:150px;
+  height:100px;
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+}
+
+.mdAnimateLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+}
+
+.mdAnimateRight {
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  }
 #intro .section-title {
   margin-bottom: 0px;
 }
