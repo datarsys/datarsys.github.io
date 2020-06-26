@@ -22,3 +22,9 @@
   desc: Different aggregation based on number of marks
   type: Tableau
   img: /img/portfolio/portfolio-candlestick.png 
+- name: pascal  
+  title: Pascal Triangle in Alteryx
+  desc: Deep dive in the Python SDK
+  type: Alteryx
+  img: /img/portfolio/portfolio-pascal.png
+  post: /2018/08/13/pascal-triangle.html
