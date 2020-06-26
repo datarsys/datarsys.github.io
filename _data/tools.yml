@@ -6,6 +6,10 @@
   img: alteryx.png
   desc: Pioneering the Analytics Process Automation to deliver end-to-end automation of analytics .
   url: https://www.alteryx.com/
+- name: Snowflake
+  img: snowflake.png
+  desc: A cloud based modern warehouse with split storage and processing. SQL.
+  url: https://www.snowflake.com/
 - name: Looker
   img: looker.png
   desc: A robust data model built on top of solid data pipelines for a self-service analytics experience.
