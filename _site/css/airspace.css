@@ -22,12 +22,15 @@ body {
 }
 h1,
 h2,
-h3,
+h3 {
+  font-family: 'poiret one', sans-serif;
+}
 h4,
 h5,
 h6 {
-  font-family: 'poiret one', sans-serif;
+font-family: 'roboto', sans-serif;
 }
+
 h2 {
   font-size: 30px;
   font-weight: 400;
@@ -180,7 +183,6 @@ font header .navbar-default .navbar-nav li a:hover {
   animation-duration: 1s;
   text-align: center;
 }
-midsizeR
 
 .mdAnimateLeft {
   animation-name: fadeInLeft;
@@ -956,4 +958,64 @@ footer .footer-manu ul li a:hover {
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+}
+
+
+/* post-list */
+
+#post-list {
+  padding: 100px 0;
+}
+#post-list .post-zone {
+  padding-right: 10%;
+  padding-left: 5%;
+}
+#post-list .post-zone .post-item {
+  padding-left: 15%;
+  padding-bottom: 15px;
+  padding-top:10px;
+}
+
+.post-list-shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+#post-list .column-area {
+  float: left;
+  padding: 10px;
+}
+#post-list .c1 {
+  width: 15%;
+}
+#post-list .c2 {
+  width: 20%;
+}
+#post-list .c3 {
+  width: 35%;
+}
+
+#post-list .column-area img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#post-list .post-area {
+  padding-left: 80px;
+  align-content: center;
+  width: 85%;
+  min-height: 150px;
+  background-color: white;
+  border-bottom: 1px dotted green;
+}
+#post-list .block h2 {
+  line-height: 27px;
+  color: #5C5C5C;
+  padding-top: 110px;
+}
+#post-list .block p {
+  width: 50%;
+  padding-top: 50px;
+  color: #7B7B7B;
 }

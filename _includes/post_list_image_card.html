@@ -1,0 +1,19 @@
+<div class="column-area c2">
+    <a href="{{ post.url | relative_url }}">
+        <img src="{{ post.image | relative_url }}" />
+    </a>
+</div>
+<div class="column-area c3">
+    <h4>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+        </a>
+    </h4>
+    <p class="post-meta">{{ post.date | date: date_format }}</p>
+    <p>
+        {% if post.oneliner %}
+        {{ post.oneliner | strip_html}}
+        {% else %}
+        {{ post.content | strip_html | truncatewords: 25 }}
+        {% endif %}    </p>
+</div>

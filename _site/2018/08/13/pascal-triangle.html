@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154686287-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154686287-2');
+</script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>A complete Python tool in Alteryx - Pascal's triangle</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!-- CSS -->
+<link rel="stylesheet" href="/css/owl.carousel.css" />
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/css/animate.css" />
+<link rel="stylesheet" href="/css/airspace.css" />
+<link rel="stylesheet" href="/css/ionicons.min.css" />
+
+<link rel="stylesheet" href="/css/style.css" />
+
+<link rel="stylesheet" href="/css/responsive.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+<!-- Js -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/min/waypoints.min.js"></script>
+<script src="/js/jquery.counterup.js"></script>
+<!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+
+<script src="/js/main.js"></script>
+
+<!--
+/*
+ * Theme modified from 
+ * Airspace
+ * Ported to Jekyll by Andrew Lee
+ * https://github.com/ndrewtl/airspace-jekyll
+ * Designed and Developed by ThemeFisher
+ * https://themefisher.com/
+ *
+ */
+-->
+
+
+  </head>
+  <body>
+
+
+    <!-- Header Start -->
+<header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- header Nav Start -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+              <img src="/img/logo.png" alt="Logo">
+            </a>
+          </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li>
+                  <a href="mailto:info@datarsys.co.uk"><i class="fa fa-envelope-o"></i> Contact</a></li>
+                  <!--
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="#">Service</a></li>
+                   -->
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><!-- header close -->
+
+
+
+    <div class="post">
+  <!-- Wrapper Start -->
+  <section id="intro" style="border: 1px dotted #ddd;">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="block">
+            <h2>A complete Python tool in Alteryx - Pascal's triangle</h2>
+            <div class="post-info-wrapper">
+              <p class="italic">By <span class="bold">DavidSM</span> on <span class="bold">August 13, 2018</span></p>
+            </div>
+            <hr />
+            <p><p>After a couple of posts
+(<a href="https://theinformationlab.co.uk/2018/08/06/dipping-my-toes-into-alteryx-python-sdk/">I</a>
+&amp;
+<a href="https://theinformationlab.co.uk/2018/08/07/adding-complexity-alteryx-pythonsdk/">II</a>)
+getting my feet wet with the <a href="https://help.alteryx.com/developer/current/Python/Overview.htm">Python SDK
+module</a>
+for
+<a href="https://help.alteryx.com/developer/current/Developer_Home.htm">Alteryx</a>
+I finally get to build a tool that actually uses some code:</p>
+
+<p><strong>The Pascal’s Triangle generator</strong></p>
+
+<p>Following the original
+<a href="https://theinformationlab.co.uk/2018/08/06/dipping-my-toes-into-alteryx-python-sdk#recipe"><em>recipe</em></a>,
+I duplicated a sample folder, renamed the files, removed most of the
+superfluous code, added the pieces I needed and, finally, connected my
+code with the AyxPlugin. All so that I can generate my own <a href="https://en.wikipedia.org/wiki/Pascal%27s_triangle">Pascal’s
+Triangles</a> with a
+single tool.</p>
+
+<figure class="image">
+    <a href="
+/img/vars/pascal.gif
+"> 
+    <img src="
+/img/vars/pascal.gif
+" alt="The tool in action - obtaining a Triangle of the desired dimensions" /></a>
+    <figcaption>The tool in action - obtaining a Triangle of the desired dimensions</figcaption>
+  </figure>
+
+<p>The main difference with the previous tool is that the code references
+two python libraries that are not part of the miniconda distribution
+that comes with Alteryx:</p>
+<ol>
+  <li><a href="https://pandas.pydata.org/">Pandas</a> and</li>
+  <li><a href="https://www.scipy.org/">Scipy</a></li>
+</ol>
+
+<p>On hindsight, this is an overkill and I could/should have just written a
+<a href="https://stackoverflow.com/questions/26560726/python-binomial-coefficient/46778364#46778364">self-contained
+implementation</a>.
+<em>BUT</em> I did want to play with importing packages and virtual
+environments so… The installer is available
+<a href="http://dsmdaviz.com/wp-content/uploads/2018/08/PascalsTriangle.yxi">here</a>. Install
+it by double clicking on it, it will appear in the “Laboratory” tools.
+Unzip the .yxi to explore the files.</p>
+
+<p>I first wrote a working example using Jupyter:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">scipy.special</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+    <span class="k">def</span> <span class="nf">Pascal</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="s">'''Returns the Pascal Triangle up to the Row defined in the value'''</span>
+ 
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">value</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="nb">range</span><span class="p">((</span><span class="n">value</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">))</span>                                 
+        <span class="c1">#instantiate the df, will need double
+</span>        <span class="c1"># the number of columns as they don't stack
+</span> 
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">df</span><span class="p">.</span><span class="n">index</span><span class="p">:</span>
+            <span class="n">diff</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#calculate the step to add to the stair
+</span>            <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">df</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">,(</span><span class="n">column</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="n">diff</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">scipy</span><span class="p">.</span><span class="n">special</span><span class="p">.</span><span class="n">binom</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">column</span><span class="p">))</span>
+                <span class="k">except</span><span class="p">:</span> <span class="k">pass</span>
+        <span class="n">df</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="s">''</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="c1"># remove zeros
+</span>        <span class="k">return</span> <span class="n">df</span></code></pre></figure>
+
+<p>Then I migrated that code into the <code class="language-plaintext highlighter-rouge">PascalTriangleEngine.py</code></p>
+
+<ol>
+  <li>Import libraries.</li>
+  <li>Bring the Pascal Function.</li>
+  <li>Update pi_push_all_records.</li>
+</ol>
+
+<p><strong>Import libraries</strong></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">AlteryxPythonSDK</span> <span class="k">as</span> <span class="n">Sdk</span>
+<span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="n">Et</span>
+<span class="kn">import</span> <span class="nn">scipy.special</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span></code></pre></figure>
+
+<p><strong>Pascal Function</strong></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">Pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="s">'''Returns the Pascal Triangle up to the Row defined in the value'''</span>
+    <span class="c1"># Instantiate the df will need double the number of 
+</span>    <span class="c1"># columns as they don't stack
+</span>    
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">value</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="nb">range</span><span class="p">((</span><span class="n">value</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> 
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">df</span><span class="p">.</span><span class="n">index</span><span class="p">:</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#calculate the step to add to the stair
+</span>        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">df</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">,(</span><span class="n">column</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="n">diff</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">scipy</span><span class="p">.</span><span class="n">special</span><span class="p">.</span><span class="n">binom</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">column</span><span class="p">))</span>
+            <span class="k">except</span><span class="p">:</span> <span class="k">pass</span>
+    <span class="n">df</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="s">''</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="c1"># remove zeros
+</span>    <span class="k">return</span> <span class="n">df</span></code></pre></figure>
+
+<p><strong>Pi_push_all</strong></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">pi_push_all_records</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_record_limit</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+
+    <span class="bp">self</span><span class="p">.</span><span class="n">dataframe</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">Pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">n_rows</span><span class="p">)</span>
+    <span class="n">record_info_out</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">build_record_info_out</span><span class="p">()</span>  <span class="c1"># Building out the outgoing record layout.
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">output_anchor</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">record_info_out</span><span class="p">)</span>  <span class="c1"># Lets the downstream tools know of the outgoing record metadata.
+</span>    <span class="n">record_creator</span> <span class="o">=</span> <span class="n">record_info_out</span><span class="p">.</span><span class="n">construct_record_creator</span><span class="p">()</span>  <span class="c1"># Creating a new record_creator for the new data.
+</span>    
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">dataframe</span><span class="p">.</span><span class="n">index</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">dataframe</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">record_info_out</span><span class="p">[</span><span class="n">t</span><span class="p">].</span><span class="n">set_from_string</span><span class="p">(</span><span class="n">record_creator</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">dataframe</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">row</span><span class="p">,</span><span class="n">column</span><span class="p">]))</span>
+            <span class="n">t</span><span class="o">+=</span><span class="mi">1</span>
+    
+        <span class="n">out_record</span> <span class="o">=</span> <span class="n">record_creator</span><span class="p">.</span><span class="n">finalize_record</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">output_anchor</span><span class="p">.</span><span class="n">push_record</span><span class="p">(</span><span class="n">out_record</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>  <span class="c1"># False: completed connections will automatically close.
+</span>        <span class="n">record_creator</span><span class="p">.</span><span class="n">reset</span><span class="p">()</span>  <span class="c1"># Resets the variable length data to 0 bytes (default) to prevent unexpected results.
+</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">alteryx_engine</span><span class="p">.</span><span class="n">output_message</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">n_tool_id</span><span class="p">,</span> <span class="n">Sdk</span><span class="p">.</span><span class="n">EngineMessageType</span><span class="p">.</span><span class="n">info</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">xmsg</span><span class="p">(</span>
+    <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">n_rows</span><span class="p">)</span><span class="o">+</span><span class="s">' records were processed.'</span><span class="p">))</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">output_anchor</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># Close outgoing connections.
+</span>    <span class="k">return</span> <span class="bp">True</span></code></pre></figure>
+
+<p>Finally, I made sure to follow the steps detailed in the <a href="https://help.alteryx.com/developer/current/Python/use/VirtualEnvironment.htm?TocPath=SDKs|Build%20Custom%20Tools|Python%20SDK|_____3">official
+documentation</a>
+to obtain the installer and proper dependencies:</p>
+
+<ol>
+  <li>Create a virtual environment.</li>
+  <li>Install packages in the virtual environment.</li>
+  <li>Create the <code class="language-plaintext highlighter-rouge">requirements.txt</code> file using pip freeze.</li>
+  <li>Create the installer .yxi.</li>
+</ol>
+
+<p><strong>Virtual environment</strong></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span>\<span class="n">Alteryx</span>\<span class="nb">bin</span>\<span class="n">Miniconda3</span><span class="o">&gt;</span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> 
+<span class="n">C</span><span class="p">:</span>\<span class="n">TempFolderWhereIamDevelopingTheTool</span></code></pre></figure>
+
+<p><strong>Packages</strong></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">cd</span> <span class="n">C</span><span class="p">:</span>\<span class="n">TempFolderWhereIamDevelopingTheTool</span>\<span class="n">Scripts</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">scipy</span></code></pre></figure>
+
+<p><strong>Requirements</strong></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">cd</span> <span class="n">C</span><span class="p">:</span>\<span class="n">TempFolderWhereIamDevelopingTheTool</span>\<span class="n">Scripts</span>
+<span class="n">pip</span> 
+<span class="n">freeze</span> <span class="o">&gt;</span> <span class="p">..</span>\<span class="n">requirements</span><span class="p">.</span><span class="n">txt</span></code></pre></figure>
+</p>
+          </div>
+        </div><!-- .col-md-7 close -->
+      </div>
+    </div>
+  </section>
+</div>
+<p class="center-text" style="padding: 30px;">
+  <a href="/blog">Back to blog</a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer Start -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer-manu">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li>
+              <a href="mailto:info@datarsys.co.uk"><i class="fa fa-envelope-o"></i> Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <!--
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Terms</a></li>
+            -->
+          </ul>
+        </div>
+        <img src="/img/name.png" alt="Company Name">
+        <p>Copyright &copy; Design &amp; Developed by <a href="http://www.themefisher.com">Themefisher</a>. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </body>
+</html>

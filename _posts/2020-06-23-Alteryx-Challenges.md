@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Alteryx Challenges | Datarsys
+title: Alteryx Challenges
 subtitle: Gamified learning of Alteryx
+oneliner: Great way to learn - challenges and examples from the community
 ---
 The *Weekly Challenges* are a powerful tool for learning Alteryx. Each week a use case is posted to test the community's Alteryx skills. Sharing the answers and approaches ensures multiple approaches can be explored and iterated by the challengers. Add some gamification and nice badges and you get a group of committed solvers in a continuous journey of learning.  
 These are some of the badges collected:  
