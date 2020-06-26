@@ -22,6 +22,10 @@ baseurl: ""
 cover: "/assets/cover.png"
 logo: "/assets/logo.png"
 contact-email: info@datarsys.co.uk
+social_links:
+  twitter: dsmd4vid
+  github: dsmdavid
+  linkedin: dsmdavid
 
 # Build settings
 markdown: kramdown
@@ -42,3 +46,24 @@ defaults:
       path: "_posts"
     values:
       author: "DavidSM"
+
+plugins:
+  - jekyll-datapage-generator
+
+# Datapage-generator
+page_gen-dirs: false # uncomment, if you prefer to generate named folders
+
+page_gen:
+  - data: 'samples'
+    template: 'tableau-samples'
+    name: 'name'
+    title: 'title'
+    dir: 'tableau'
+    filter_condition: "record['type'] == 'Tableau'" 
+
+  - data: 'samples'
+    template: 'alteryx-samples'
+    name: 'name'
+    title: 'title'
+    dir: 'alteryx'
+    filter_condition: "record['type'] == 'Alteryx'" 

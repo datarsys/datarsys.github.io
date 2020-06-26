@@ -145,12 +145,16 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 #intro .block h2 {
   padding-top: 35px;
+  padding-left: 40px;
+
   line-height: 27px;
   margin: 0;
 }
 #intro .block p {
   color: #7B7B7B;
   padding-top: 20px;
+  padding-left: 40px;
+  width: 80%;
 }
 #intro .block img {
   padding-left: 40px;
@@ -169,6 +173,14 @@ font header .navbar-default .navbar-nav li a:hover {
   animation-name: fadeInLeft;
   animation-duration: 1s;
 }
+#intro .block img[src*="#midsizeR"] {
+  width:400px;
+  height:400px;
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  text-align: center;
+}
+midsizeR
 
 .mdAnimateLeft {
   animation-name: fadeInLeft;

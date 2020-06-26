@@ -18,7 +18,7 @@
 
 .post-area {
   padding: 40px;
-  width: 100%;
+  width: 85%;
   min-height: 150px;
   background-color: white;
   border-bottom: 1px dotted #ddd;
@@ -41,4 +41,19 @@
 img[src*="#thumbnail"] {
   width:150px;
   height:150px;
+}
+
+figure {
+  border: 1px #cccccc solid;
+  padding: 4px;
+  margin: auto;
+}
+
+figcaption {
+  /* background-color: black;
+  */
+  color: rgb(29, 28, 28);
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
 }
