@@ -1,10 +1,10 @@
 - name: Home 
-  url: site.baseurl
+  url: "{{ site.baseurl }} / "
   faicon: fa fa-home
 - name: Work 
-  url: "{{ site.baseurl }}/work"
+  url: "/work"
 - name: Blog 
-  url: "{{ site.baseurl }}/blog"
+  url: "/blog"
 - name: Contact
   url: "mailto:{{ site.contact-email }}"
   faicon: fa fa-envelope-o

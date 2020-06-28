@@ -366,6 +366,52 @@ px      68    160    252    */
     display: block;
     width: 100%;
   }
+  /*--
+	blog Start 
+--*/
+#blog-list .block .blog-manu {
+  padding-left: 0px;
+  text-align: center;
+}
+#blog-list .block .blog-manu ul li {
+  padding: 0 8px;
+}
+#blog-list .block .blog-content ul li {
+  width: 100%;
+}
+#blog-list .block .blog-content ul img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#blog-list .block .blog-content ul li a .img-heading {
+  padding: 5px 0 5px 13px;
+}
+#blog-list .block .blog-content ul li a .img-heading h2 {
+  font-size: 20px;
+  line-height: 25px;
+}
+#blog-list .block .blog-content ul li a .img-heading p {
+  font-size: 11px;
+  line-height: 20px;
+}
+#blog-list .block .blog-content ul li a .overlay {
+  padding-left: 15px;
+}
+#blog-list .block .blog-content ul li a .overlay h2 {
+  padding-top: 65px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  line-height: 25px;
+}
+#blog-list .block .blog-content ul li a .overlay p {
+  font-size: 11px;
+  line-height: 20px;
+  padding-top: 15px;
+  padding-right: 5px;
+}
   /*---------------------------------------------
 					Work close 
 -----------------------------------------------*/

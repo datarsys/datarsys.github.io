@@ -1101,10 +1101,14 @@
 }
 #blog-list .block .blog-content ul li {
   float: left;
-  width: 32.22%;
+  width: 30%;
   overflow: hidden;
-  margin: 6px;
+  margin: 10px;
   position: relative;
+  -webkit-box-shadow: 5px 10px 5px 0px rgba(4,39,107,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(4,39,107,1);
+  box-shadow: 10px 10px 5px 0px rgba(4,39,107,1);
+
 }
 #blog-list .block .blog-content ul li:hover .overly {
   opacity: 1;
@@ -1121,7 +1125,7 @@
   font-size: 22px;
   font-family: 'Open Sans';
   letter-spacing: 1px;
-  color: cornflowerblue ;
+  color: rgba(4,39,107,1) ;
 }
 #blog-list .block .blog-content ul li a {
   display: block;
