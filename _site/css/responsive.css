@@ -130,6 +130,38 @@ px      68    160    252    344    436    528    620    712    */
   #features-work .block ul li {
     width: 49%;
   }
+
+  /*--
+	Blog Start 
+--*/
+#blog-list .block .portfolio-manu {
+  padding-left: 0px;
+}
+#blog-list .block .blog-content ul li a .img-heading {
+  padding: 5px 0 5px 13px;
+}
+#blog-list .block .blog-content ul li a .img-heading h2 {
+  font-size: 20px;
+  line-height: 25px;
+}
+#blog-list .block .blog-content ul li a .img-heading p {
+  font-size: 11px;
+  line-height: 20px;
+}
+#blog-list .block .blog-content ul li a .overlay {
+  padding-left: 15px;
+}
+#blog-list .block .blog-content ul li a .overlay h2 {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  line-height: 25px;
+}
+#blog-list .block .blog-content ul li a .overlay p {
+  font-size: 11px;
+  line-height: 20px;
+  padding-top: 15px;
+}
   /*---------------------------------------------
 					Work close 
 -----------------------------------------------*/

@@ -4,6 +4,7 @@ date: 2018-08-13
 title: A complete Python tool in Alteryx - Pascal's triangle
 image: /img/portfolio/portfolio-pascal.png
 oneliner: Deep dive in the Python SDK for Alteryx
+type: Alteryx
 ---
 
 

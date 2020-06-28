@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 
 	$("#portfolio-contant-active").mixItUp();
+	$("#blog-content-active").mixItUp();
 
 
 	$("#testimonial-slider").owlCarousel({
