@@ -25,11 +25,10 @@ permalink: /blog/
             <div class="blog-content">
               <ul id="blog-content-active">
                 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-
                 {% for post in site.posts %}
                 <li class="mix {{ post.type }} hvr-bob hvr-round-corners ">
                   {% if post.image %}
-                  <img src="{{ post.image | relative_url }}" />
+                  <img src="{{ post.image | relative_url }}" alt ="Featured image for post {{ post.title }}"/>
                   {% endif %}
                   <h2> {{ post.title }}</h2>
                   <p class="post-meta">{{ post.date | date: date_format }}</p>

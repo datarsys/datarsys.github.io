@@ -1036,6 +1036,7 @@
   overflow: hidden;
   padding: 80px 0;
 }
+
 #blog-list .block .blog-menu {
   padding-bottom: 30px;
   text-align: center;
@@ -1142,7 +1143,7 @@
   color: #655E7A;
 }
 #blog-list .block .blog-content ul img {
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 #blog-list .block .blog-content .overly {
@@ -1156,7 +1157,7 @@
   -webkit-transition: .3s all;
   -o-transition: .3s all;
   transition: .3s all;
-  text-align: center;
+  text-align: left;
 }
 #blog-list .block .blog-content .position-center {
   position: absolute;
