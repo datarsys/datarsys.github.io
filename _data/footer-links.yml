@@ -1,0 +1,19 @@
+- name: Home 
+  url: site.baseurl
+  faicon: fa fa-home
+- name: Work 
+  url: "{{ site.baseurl }}/work"
+- name: Blog 
+  url: "{{ site.baseurl }}/blog"
+- name: Contact
+  url: "mailto:{{ site.contact-email }}"
+  faicon: fa fa-envelope-o
+- name: Github
+  url: https://github.com/dsmdavid
+  faicon: fa fa-github
+- name: Linkedin 
+  url: https://www.linkedin.com/company/datarsys
+  faicon: fa fa-linkedin
+- name: Twitter 
+  url: https://twitter.com/dsmd4vid
+  faicon: fa fa-twitter
