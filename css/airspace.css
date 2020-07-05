@@ -199,6 +199,12 @@
  #intro .section-title p {
    padding-top: 20px;
  }
+
+ #intro .btn-view-works {
+  background: #655E7A;
+  color: #fff;
+  padding: 10px 20px;
+}
  /*--
    service Start
  --*/
@@ -271,7 +277,13 @@
    color: #333333;
    margin-top: 30px;
  }
- 
+ #call-to-action a {
+   color:  #FF007F;
+ }
+ #call-to-action a:hover {
+   background-color: #fff;
+}
+
  /*--
    Feature Start
  --*/
@@ -423,7 +435,7 @@
  #tool .tool-carousel {
    text-align: center;
    width: 75%;
-   border: 3px solid #31A1B3;/* #ff007f;*/
+   border: 3px solid #5060A9; /* #31A1B3;/* #ff007f;*/
    border-radius: 5%;
    padding: 24px;
    margin: 0 auto;

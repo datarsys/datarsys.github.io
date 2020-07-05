@@ -159,3 +159,8 @@ cd C:\TempFolderWhereIamDevelopingTheTool\Scripts
 pip 
 freeze > ..\requirements.txt
 {% endhighlight %}
+
+
+## Thanks for reading!  
+
+Find this and other python tools for Alteryx in my <a href="https://github.com/dsmdavid/PythonSDKTools"><i class="fa fa-github"></i> repo </a>. 
