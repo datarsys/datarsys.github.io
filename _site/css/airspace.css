@@ -1117,10 +1117,9 @@
   overflow: hidden;
   margin: 10px;
   position: relative;
-  -webkit-box-shadow: 5px 10px 5px 0px rgba(4,39,107,1);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(4,39,107,1);
-  box-shadow: 10px 10px 5px 0px rgba(4,39,107,1);
-
+  -webkit-box-shadow: 5px 10px 5px 0px #999999; rgba(4,39,107,1);
+  -moz-box-shadow: 10px 10px 5px 0px #999999; rgba(4,39,107,1);
+  box-shadow: 10px 10px 5px 0px #999999; rgba(4,39,107,1);
 }
 #blog-list .block .blog-content ul li:hover .overly {
   opacity: 1;
